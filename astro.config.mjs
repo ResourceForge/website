@@ -17,6 +17,15 @@ export default defineConfig({
 				github: 'https://github.com/resourceforge',
 			},
 			sidebar: [
+				{
+					label: 'Resources',
+					items: [
+						{ 
+							label: 'Character selector', 
+							autogenerate: { directory: 'character-selector' }
+						}
+					]
+				}
 				// {
 				// 	label: 'Guides',
 				// 	items: [
