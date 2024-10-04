@@ -3,6 +3,8 @@ import starlight from '@astrojs/starlight';
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://resourceforge.net',
+	base: '/',
 	integrations: [
 		starlight({
 			title: 'ResourceForge',
