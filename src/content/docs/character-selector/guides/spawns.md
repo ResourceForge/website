@@ -8,7 +8,7 @@ description: todo
 The individual spawn locations can be changed in the config file `sh_config.lua` under `CONFIG.SPAWNS`
 
 <div align="center">
-  <img src="../../../../assets/thumbnail_helper_numbered.png" alt="alt"/>
+  <img src="/src/assets/thumbnail_helper_numbered.png" alt="alt"/>
   <br>
   Highlighted spawn selection
 </div>
@@ -33,7 +33,7 @@ CONFIG.SPAWNS = {
 
 ## Thumbnails
 
-| ![alt-1](../../../../assets/thumbnail_helper_normal.png "title-1")      | ![alt-2](../../../../assets/thumbnail_helper_highlighted.png "title-2") |
+| ![alt-1](/src/assets/thumbnail_helper_normal.png "title-1")      | ![alt-2](/src/assets/thumbnail_helper_highlighted.png "title-2") |
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | Normal view                                                             |                                                                         |
 
