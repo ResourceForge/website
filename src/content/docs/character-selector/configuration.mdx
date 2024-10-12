@@ -179,12 +179,12 @@ Plays an animation on the character ped after being placed at a position
 - freeze?: `boolean`
 
 ```lua
-    anim = {
-        dictionary = 'missfam1_yachtbattleonyacht02_',
-        animation = 'onboom_twohand_hang_idle',
-        duration = -1,
-        flags = ANIM_FLAG.LOOP,
-    },
+anim = {
+    dictionary = 'missfam1_yachtbattleonyacht02_',
+    animation = 'onboom_twohand_hang_idle',
+    duration = -1,
+    flags = ANIM_FLAG.LOOP,
+},
 ```
 
 - See available animation flags [here](/character-selector/types)
@@ -201,13 +201,13 @@ Plays a scenario on the character ped after being placed at a position
 - warp?: `boolean`
 
 ```lua
-    scenario = {
-        scenario = 'PROP_HUMAN_SEAT_BENCH',
-        positionOffset = vector3(0, 0, -0.95),
-        duration = -1,
-        playIntro = false,
-        warp = true
-    }
+scenario = {
+    scenario = 'PROP_HUMAN_SEAT_BENCH',
+    positionOffset = vector3(0, 0, -0.95),
+    duration = -1,
+    playIntro = false,
+    warp = true
+}
 ```
 
 ### Camera
@@ -219,10 +219,10 @@ The camera settings controls where the camera is located and where the camera is
 - boneId?: `integer`
 
 ```lua
-    camera = {
-        positionOffset = vector3(1.55, 0.8, 0.7),
-        targetOffset = vector3(-1.0, 1.8, 0.5)
-    },
+camera = {
+    positionOffset = vector3(1.55, 0.8, 0.7),
+    targetOffset = vector3(-1.0, 1.8, 0.5)
+},
 ```
 
 - The position of the character ped camera is offset relative to the ped's position
@@ -233,7 +233,7 @@ The camera settings controls where the camera is located and where the camera is
 The `lookAt` option controls where the character peds is actually looking, for example this can be used to make the character look towards the camera when it may not be facing towards it.
 
 ```lua
-    lookAt = vector3(1.55, 0.8, 0.7),
+lookAt = vector3(1.55, 0.8, 0.7),
 ```
 
 - The lookAt option position an offset relative to the character peds position.
