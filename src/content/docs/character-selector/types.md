@@ -5,7 +5,9 @@ description: todo
 
 List of types used within the resource
 
-## CharacterPedOptions
+## Configuration
+
+### CharacterPedOptions
 
 ```lua
 ---@class CharacterPedOptions
@@ -17,7 +19,11 @@ List of types used within the resource
 ---@field camera? PedCameraOptions
 ---@field lookAt? vector3
 ---@field effect? string
+```
 
+### PedAnimationOptions
+
+```lua
 ---@class PedAnimationOptions
 ---@field dictionary string
 ---@field animation string
@@ -32,19 +38,33 @@ List of types used within the resource
 ---@field phaseControlled? boolean
 ---@field ikFlags? integer
 ---@field freeze? boolean
+```
 
+### PedScenarioOptions
+
+```lua
 ---@class PedScenarioOptions
 ---@field scenario string
 ---@field duration number
 ---@field positionOffset? vector3
 ---@field playIntro? boolean
 ---@field warp? boolean
+```
 
+### PedCameraOptions
+
+```lua
 ---@class PedCameraOptions
 ---@field positionOffset? vector3
 ---@field targetOffset? vector3
 ---@field boneId? integer
+```
 
+## Animation
+
+### Blends
+
+```lua
 ---@enum AnimBlend
 ANIM_BLEND = {
     WALK_BLEND_IN = 1.5, -- 20 frames
@@ -60,7 +80,11 @@ ANIM_BLEND = {
     INSTANT_BLEND_IN = 1000.0, -- 0 frames
     INSTANT_BLEND_OUT = -1000.0, -- 0 frames
 }
+```
 
+### Flags
+
+```lua
 ---@enum AnimFlags
 ANIM_FLAG = {
     DEFAULT = 0,
@@ -72,7 +96,13 @@ ANIM_FLAG = {
     TURN_OFF_COLLISION = 512, -- Won't react to collision detection
     HIDE_WEAPON = 1048576, -- Will hide weapon when animation is playing
 }
+```
 
+## Internal
+
+### Character
+
+```lua
 ---@class Character
 ---@field charId? number
 ---@field firstName? string
@@ -84,17 +114,29 @@ ANIM_FLAG = {
 ---@field street? string
 ---@field isNew? boolean
 ---@field order? number
+```
 
+### NewCharacter
+
+```lua
 ---@class NewCharacter
 ---@field firstName string
 ---@field lastName string
 ---@field gender string
 ---@field date string
+```
 
+### CharacterPed
+
+```lua
 ---@class CharacterPed
 ---@field ped number
 ---@field camera Camera
+```
 
+### Camera
+
+```lua
 ---@class Camera
 ---@field Destroy fun(self: self): self
 ---@field Create fun(self: self): self
@@ -112,7 +154,11 @@ ANIM_FLAG = {
 ---@field Exists fun(self: self): boolean
 ---@field Active fun(self: self): boolean
 ---@field Rendering fun(self: self): boolean
+```
 
+### CameraTransition
+
+```lua
 ---@enum CameraTransition
 CAMERA_TRANSITION = {
 	LINEAR = 0,
@@ -145,7 +191,11 @@ CAMERA_TRANSITION = {
 	CIRCULAR_EASE_OUT = 27,
 	CIRCULAR_EASE_IN_OUT = 28,
 }
+```
 
+### EffectState
+
+```lua
 ---@class EffectState
 ---@field active boolean
 ---@field reset function
