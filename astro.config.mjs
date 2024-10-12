@@ -19,14 +19,18 @@ export default defineConfig({
 			},
 			sidebar: [
 				{
-					label: 'Resources',
+					label: 'General',
 					items: [
-						{ 
-							label: 'Character selector', 
-							autogenerate: { directory: 'character-selector' }
-						}
+                        {
+                            label: 'Getting started',
+                            link: '/getting-started'
+                        },
 					]
-				}
+				},
+                {
+                    label: 'Character selector',
+                    autogenerate: { directory: 'character-selector',  }
+                }
 				// {
 				// 	label: 'Guides',
 				// 	items: [
@@ -39,6 +43,9 @@ export default defineConfig({
 				// 	autogenerate: { directory: 'reference' },
 				// },
 			],
+			customCss: [
+				'./src/styles/sidebar.css'
+			]
 		}),
 	],
 });
