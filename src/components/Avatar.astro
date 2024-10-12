@@ -1,0 +1,35 @@
+---
+const { ghuser, username } = Astro.props;
+---
+
+<a class="avatar-container" href={`https://github.com/${ghuser}`}>
+    <img class="avatar-image" src={`https://github.com/${ghuser}.png`} alt="GitHub Avatar" />
+    <span class="avatar-title">{username}</span>
+</a>
+
+
+<style>
+    .avatar-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 0 !important;
+        text-decoration: none;
+    }
+
+    .avatar-image {
+        width: 128px;
+        height: 128px;
+        border-radius: 5px;
+        border: 1px solid var(--sl-color-gray-5);
+        padding: 5px;
+    }
+
+    .avatar-title {
+        font-size: 1rem;
+        font-weight: 500;
+
+        text-decoration: none !important;
+        color: var(--sl-color-white);
+    }
+</style>
