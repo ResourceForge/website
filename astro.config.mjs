@@ -31,21 +31,13 @@ export default defineConfig({
                     label: 'Character selector',
                     autogenerate: { directory: 'character-selector',  }
                 }
-				// {
-				// 	label: 'Guides',
-				// 	items: [
-				// 		// Each item here is one entry in the navigation menu.
-				// 		{ label: 'Example Guide', slug: 'guides/example' },
-				// 	],
-				// },
-				// {
-				// 	label: 'Reference',
-				// 	autogenerate: { directory: 'reference' },
-				// },
 			],
 			customCss: [
 				'./src/styles/sidebar.css'
-			]
+			],
+            expressiveCode: {
+                themes: [ 'dark-plus', 'light-plus' ]
+            }
 		}),
 	],
 });
