@@ -3,6 +3,8 @@ title: ND Core
 description: Installation and configuration instructions when using the ND Core framework with character-selector
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
 ## Installation
 
 - Setup [nd](https://github.com/ND-Framework)
@@ -15,9 +17,9 @@ description: Installation and configuration instructions when using the ND Core 
 
 ## Configure max number of characters
 
-:::warning
-    Ensure there are enough character peds defined in the configuration when setting max characters, by default a max of `8` characters is supported.
-:::
+<Aside type="caution">
+Ensure there are enough character peds defined in the configuration when setting max characters, by default a max of `8` characters is supported.
+</Aside>
 
 - In `sh_config.lua` set the `CONFIG.MAX_CHARACTERS` to a `number` of your choice e.g. `3`.
 

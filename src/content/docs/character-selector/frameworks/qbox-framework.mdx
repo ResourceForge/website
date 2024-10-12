@@ -3,6 +3,8 @@ title: QBox
 description: Installation and configuration instructions when using the Qbox framework with character-selector
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
 ## Installation
 
 - Setup [qbox](https://github.com/Qbox-project/qbx_core)
@@ -14,9 +16,9 @@ description: Installation and configuration instructions when using the Qbox fra
 
 ## Configure max number of characters
 
-:::warning
-    Ensure there are enough character peds defined in the configuration when setting max characters, by default a max of `8` characters is supported.
-:::
+<Aside type="caution">
+Ensure there are enough character peds defined in the configuration when setting max characters, by default a max of `8` characters is supported.
+</Aside>
 
 - In `sh_config.lua` the `CONFIG.MAX_CHARACTERS` option **does not apply** to **Qbox**.
 - The max number of characters can be set in the `qbx_core` config
@@ -35,6 +37,6 @@ description: Installation and configuration instructions when using the Qbox fra
     },
 ```
 
-:::note
-    The max characters per player id is also supported using `playersNumberOfCharacters`
-:::
+<Aside type="tip">
+The max characters per player id is also supported using `playersNumberOfCharacters`
+</Aside>

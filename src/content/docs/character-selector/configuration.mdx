@@ -3,6 +3,8 @@ title: Configuration
 description: Layout of character-selector configuration with descriptions and examples
 ---
 
+import { Aside } from '@astrojs/starlight/components';
+
 The configuration for the resource is all contained within `sh_config.lua` in the root directory of the resource and allows for configurating max characters, where characters are positioned, character effects, character spawns and which frameworks to use.
 
 ## Framework
@@ -26,7 +28,7 @@ FRAMEWORK = {
 }
 ```
 
-See [frameworks](http://localhost:3000/category/frameworks) for framework specfic installation steps
+See [frameworks](/character-selector/frameworks/nd-framework) for framework specfic installation steps
 
 ## Appearance
 
@@ -50,15 +52,15 @@ APPEARANCE = {
 
 ## Max characters
 
-:::info
-    This option does not work when using the ox or qbox frameworks, See [frameworks](http://localhost:3000/category/frameworks) for instructions
-:::
+<Aside>
+This option does not work when using the ox or qbox frameworks, See [frameworks](/character-selector/frameworks/nd-framework) for instructions
+</Aside>
 
 How many characters the resource will allow you to create. If a player already has more characters than the maximum they still will be able to see them all.
 
-:::warning
-    Ensure there are enough character peds defined when setting max characters, by default a max of 8 characters is supported.
-:::
+<Aside type="caution">
+Ensure there are enough character peds defined in the configuration when setting max characters, by default a max of `8` characters is supported.
+</Aside>
 
 ```lua
 CONFIG.MAX_CHARACTERS = 8;
@@ -81,7 +83,7 @@ CONFIG.SPAWNS = {
 ```
 
 - Only 6 spawns are supported.
-- Thumbnail images for each spawn can be changed, see [here](todo)
+- Thumbnail images for each spawn can be changed, see [here](/character-selector/guides/spawns#thumbnails)
 - Spawns can be handled by another resource, see [here](todo)
 
 ## Character peds
@@ -185,8 +187,8 @@ Plays an animation on the character ped after being placed at a position
     },
 ```
 
-- See available animation flags [here](./types)
-- See available animation blend deltas [here](./types)
+- See available animation flags [here](/character-selector/types)
+- See available animation blend deltas [here](/character-selector/types)
 
 #### Scenario
 
@@ -245,4 +247,4 @@ effect = 'name'
 ```
 
 - `effect` simply takes the name of an effect and is optional
-- Additional effects can be created see [here](./guides/effects.md) for a guide.
+- Additional effects can be created see [here](/character-selector/guides/effects) for a guide.
