@@ -15,6 +15,12 @@ const { ghuser, username } = Astro.props;
         align-items: center;
         margin-top: 0 !important;
         text-decoration: none;
+
+        &:hover {
+            transform: scale(1.05, 1.05);
+        }
+
+        transition: cubic-bezier(0.23, 1, 0.320, 1) all 0.4s;
     }
 
     .avatar-image {
