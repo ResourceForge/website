@@ -1,0 +1,110 @@
+---
+title: Client exports
+description: A list of available client exports within the character-selector resource
+---
+
+import { Tabs, TabItem, Aside } from '@astrojs/starlight/components';
+
+## Exports
+
+### setSpawnOverride
+
+Pass in a your own callback function and override the spawning process for **existing** characters.
+
+<Aside type="tip">
+At the point of execution the player will be hovering in the sky in the player switch state. The [SwitchToMultiSecondpart](https://docs.fivem.net/natives/?_0xD8295AF639FD9CB8) can be used to return the camera to the player's character.
+</Aside>
+
+<Tabs syncKey="lang">
+    <TabItem label="Lua" icon='seti:lua'>
+        ```lua
+        exports['character-selector']:setSpawnOverride(function(character)
+            local ped = PlayerPedId();
+
+            -- Set player position
+            SetEntityCoords(ped, character.x, character.y, character.z);
+            SetEntityHeading(ped, character.heading);
+
+            -- Switch camera to player
+            SwitchToMultiSecondpart(ped);
+        end)
+        ```
+    </TabItem>
+    <TabItem label="JavaScript" icon="seti:javascript">
+        ```js
+        exports['character-selector'].setSpawnOverride((character) => {
+            let ped = PlayerPedId();
+
+            // Set player position
+            SetEntityCoords(ped, character.x, character.y, character.z);
+            SetEntityHeading(ped, character.heading);
+
+            // Switch camera to player
+            SwitchToMultiSecondpart(ped);
+        });
+        ```
+    </TabItem>
+    <TabItem label="C#" icon="seti:c-sharp">
+        ```csharp
+        Exports["character-selector"].setSpawnOverride(new Action<dynamic>((character) =>
+        {
+            var ped = PlayerPedId();
+
+            // Set player position
+            SetEntityCoords(ped, character.x, character.y, character.z);
+            SetEntityHeading(ped, character.heading);
+
+            // Switch camera to player
+            SwitchToMultiSecondpart(ped);
+        }));
+        ```
+    </TabItem>
+</Tabs>
+
+- character: [Character](/character-selector/types#character)
+    - Object with selected character data
+
+### setSelectSpawnOverride
+
+Pass in a your own callback function and override the spawn selection process for **new** characters.
+
+<Aside type="tip">
+At the point of execution the player will be hovering in the sky in the player switch state. The [SwitchToMultiSecondpart](https://docs.fivem.net/natives/?_0xD8295AF639FD9CB8) can be used to return the camera to the player's character.
+</Aside>
+
+<Tabs syncKey="lang">
+    <TabItem label="Lua" icon='seti:lua'>
+        ```lua
+        exports['character-selector']:setSelectSpawnOverride(function()
+            -- Switch camera to player
+            local ped = PlayerPedId();
+            SwitchToMultiSecondpart(ped);
+
+            -- Open a ui showing a selecting of spawns to choose from
+        end)
+        ```
+    </TabItem>
+    <TabItem label="JavaScript" icon="seti:javascript">
+        ```js
+        exports['character-selector'].setSelectSpawnOverride(() => {
+            // Switch camera to player
+            let ped = PlayerPedId();
+            SwitchToMultiSecondpart(ped);
+
+            // Open a ui showing a selecting of spawns to choose from
+        });
+        ```
+    </TabItem>
+    <TabItem label="C#" icon="seti:c-sharp">
+        ```csharp
+        Exports["character-selector"].setSelectSpawnOverride(new Action<dynamic>(() =>
+        {
+            // Switch camera to player
+            var ped = PlayerPedId();
+            SwitchToMultiSecondpart(ped);
+
+            // Open a ui showing a selecting of spawns to choose from
+        }));
+        ```
+    </TabItem>
+</Tabs>

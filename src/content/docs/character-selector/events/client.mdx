@@ -1,0 +1,37 @@
+---
+title: Client events
+description: A list of available client events within the character-selector resource
+---
+
+import { Tabs, TabItem } from '@astrojs/starlight/components';
+
+## Event handlers
+
+### characterSpawned
+
+<Tabs syncKey="lang">
+    <TabItem label="Lua" icon='seti:lua'>
+        ```lua
+        AddEventHandler('characterSpawned', function(isNew)
+            -- do something
+        end)
+        ```
+    </TabItem>
+    <TabItem label="JavaScript" icon="seti:javascript">
+        ```js
+        on('characterSpawned', (isNew) => {
+            // do something
+        });
+        ```
+    </TabItem>
+    <TabItem label="C#" icon="seti:c-sharp">
+        ```csharp
+        EventHandlers["characterSpawned"] += new Action<bool>((isNew) => {
+            // do something
+        });
+        ```
+    </TabItem>
+</Tabs>
+
+- isNew: `boolean`
+    - If spawned character is newly created or not
