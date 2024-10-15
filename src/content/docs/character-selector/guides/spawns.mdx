@@ -3,13 +3,17 @@ title: Change where new players spawn
 description: todo
 ---
 
+import thumbnailHelperNumbered from '@assets/thumbnail_helper_numbered.png';
+import thumbnailHelperNormal from '@assets/thumbnail_helper_normal.png';
+import thumbnailHelperHighlighted from '@assets/thumbnail_helper_highlighted.png';
+
 ## Locations
 
 The individual spawn locations can be changed in the config file `sh_config.lua` under `CONFIG.SPAWNS`
 
 <div align="center">
-  <img src="/src/assets/thumbnail_helper_numbered.png" alt="alt"/>
-  <br>
+  <img src={thumbnailHelperNumbered.src} alt="alt"/>
+  <br/>
   Highlighted spawn selection
 </div>
 
@@ -33,7 +37,7 @@ CONFIG.SPAWNS = {
 
 ## Thumbnails
 
-| ![alt-1](/src/assets/thumbnail_helper_normal.png "title-1")      | ![alt-2](/src/assets/thumbnail_helper_highlighted.png "title-2") |
+| <img src={thumbnailHelperNormal.src} alt="alt-1"/>      | <img src={thumbnailHelperHighlighted.src} alt="alt-2"/> |
 | ----------------------------------------------------------------------- | ----------------------------------------------------------------------- |
 | Normal view                                                             |                                                                         |
 
